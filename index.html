@@ -448,6 +448,7 @@ footer{background:var(--green-dark);color:rgba(255,255,255,.5);text-align:center
     <button onclick="window.open(window.location.href,'_blank')" style="padding:6px 14px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.4);border-radius:7px;color:#fff;font-size:.75rem;font-weight:bold;cursor:pointer;white-space:nowrap;transition:background .2s" onmouseover="this.style.background='rgba(255,255,255,.28)'" onmouseout="this.style.background='rgba(255,255,255,.18)'">＋ Nouveau Dimensionnement</button>
   </div>
 </header>
+<div id="sync-indicator" onclick="SB.pullAll().then(function(){SB.setSyncUI('ok');if(typeof render==='function')render();renderTechSelect();}).catch(function(){SB.setSyncUI('offline')})" title="Cliquer pour synchroniser" style="position:fixed;top:8px;right:12px;cursor:pointer;font-size:.7rem;display:flex;flex-direction:column;align-items:center;gap:2px;opacity:.9;z-index:9999;background:rgba(0,0,0,.25);padding:4px 8px;border-radius:8px;color:#fff">☁️ <span style="font-size:.65rem">Sync</span></div>
 <div class="section-nav" id="section-nav">
   <button class="section-btn active" id="btn-fiche"     onclick="switchSection('fiche')">☀️ Mon Dimensionnement Solaire</button>
   <button class="section-btn"        id="btn-dashboard" onclick="switchSection('dashboard')">📊 Dashboard</button>
@@ -1160,10 +1161,73 @@ let STATE = {coverage:90, gridType:'off-grid', results:null, selectedPack:null};
 let loadRows = [];
 let loadCounter = 0;
 
+
+// ═══════════════════════════════════════════════════════════════════
+// SUPABASE — Base de données partagée temps réel
+// ═══════════════════════════════════════════════════════════════════
+var SB = (function(){
+  var BASE = 'https://chhtrnmyzyiuxsexzvuj.supabase.co/rest/v1';
+  var KEY  = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNoaHRybm15enlpdXhzZXh6dnVqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg3MzE5NjQsImV4cCI6MjA5NDMwNzk2NH0.RNW0nJ-2dqVuebVsrwKgAStcK8Fzjs6cN4DLKVhZYa8';
+  var HDR  = {
+    'apikey': KEY,
+    'Authorization': 'Bearer ' + KEY,
+    'Content-Type': 'application/json',
+    'Prefer': 'resolution=merge-duplicates'
+  };
+
+  function pull(table, lsKey) {
+    return fetch(BASE + '/' + table + '?select=data&order=updated_at.asc', { headers: HDR })
+      .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function(rows){
+        if (!Array.isArray(rows)) return;
+        var arr = rows.map(function(r){ return r.data; });
+        localStorage.setItem(lsKey, JSON.stringify(arr));
+        return arr;
+      });
+  }
+
+  function push(table, arr) {
+    if (!arr || !arr.length) return Promise.resolve();
+    var rows = arr.map(function(item){
+      return { id: String(item.id), data: item, updated_at: new Date().toISOString() };
+    });
+    return fetch(BASE + '/' + table, {
+      method: 'POST', headers: HDR, body: JSON.stringify(rows)
+    });
+  }
+
+  function del(table, id) {
+    return fetch(BASE + '/' + table + '?id=eq.' + encodeURIComponent(String(id)), {
+      method: 'DELETE', headers: HDR
+    });
+  }
+
+  function pullAll() {
+    return Promise.all([
+      pull('techniciens',      'greeno_techniciens'),
+      pull('dimensionnements', 'greeno_dimensionnements')
+    ]);
+  }
+
+  function setSyncUI(state) {
+    var el = document.getElementById('sync-indicator');
+    if (!el) return;
+    var cfg = {
+      loading: { icon: '⏳', txt: 'Chargement…', color: '#888' },
+      ok:      { icon: '☁️', txt: 'Synchronisé',  color: '#4caf50' },
+      offline: { icon: '⚠️', txt: 'Hors-ligne',   color: '#ff9800' }
+    };
+    var c = cfg[state] || cfg.offline;
+    el.innerHTML = c.icon + ' <span style="color:' + c.color + ';font-size:.68rem">' + c.txt + '</span>';
+  }
+
+  return { pull:pull, push:push, del:del, pullAll:pullAll, setSyncUI:setSyncUI };
+})();
+
 // ─── TECHNICIENS ─────────────────────────────────────────────────────
 const TECH_KEY='greeno_techniciens';
 function getTechs(){try{return JSON.parse(localStorage.getItem(TECH_KEY)||'[]');}catch(e){return[];}}
-function saveTechs(t){localStorage.setItem(TECH_KEY,JSON.stringify(t));}
+function saveTechs(t){localStorage.setItem(TECH_KEY,JSON.stringify(t)); SB.push('techniciens',t).then(function(){SB.setSyncUI('ok');}).catch(function(){SB.setSyncUI('offline');});}
 
 function renderTechSelect(){
   const sel=document.getElementById('tech-select');
@@ -1389,7 +1453,21 @@ function switchSection(section){
 
 // Init au chargement
 document.addEventListener('DOMContentLoaded',function(){
-  renderTechSelect();
+  SB.setSyncUI('loading');
+  SB.pullAll()
+    .then(function(){ SB.setSyncUI('ok'); })
+    .catch(function(){ SB.setSyncUI('offline'); })
+    .finally(function(){
+      renderTechSelect();
+      // Sync auto toutes les 90 secondes
+      if (!window._sbSyncTimer) {
+        window._sbSyncTimer = setInterval(function(){
+          SB.pullAll()
+            .then(function(){ SB.setSyncUI('ok'); if(typeof render==='function') render(); })
+            .catch(function(){ SB.setSyncUI('offline'); });
+        }, 90000);
+      }
+    });
 });
 
 // ─── PSH UPDATE ──────────────────────────────────────────────────────
@@ -2402,7 +2480,7 @@ function getDB(){
   try{ return JSON.parse(localStorage.getItem(DB_KEY)||'[]'); }
   catch(e){ return []; }
 }
-function saveDB(data){ localStorage.setItem(DB_KEY, JSON.stringify(data)); }
+function saveDB(data){ localStorage.setItem(DB_KEY, JSON.stringify(data)); SB.push('dimensionnements',data).then(function(){SB.setSyncUI('ok');}).catch(function(){SB.setSyncUI('offline');}); }
 
 function getTechInfo(){
   const nom=(document.getElementById('tech-nom')?.value||'').trim();
@@ -3913,6 +3991,7 @@ function closeModal(){
 /* ─── DELETE ─────────────────────────────────── */
 function deleteRecord(id){
   if(!confirm('Supprimer ce dimensionnement ? Cette action est irréversible.')) return;
+  SB.del('dimensionnements', id);
   allData = allData.filter(x=>x.id!==id);
   saveDB(allData);
   render();
