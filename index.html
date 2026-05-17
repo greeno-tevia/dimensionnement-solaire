@@ -444,29 +444,29 @@ footer{background:var(--green-dark);color:rgba(255,255,255,.5);text-align:center
     <p>Collecte client · Bilan de charges · Calcul PV · Rapport technique professionnel</p>
   </div>
   <div class="header-right" style="display:flex;flex-direction:column;align-items:flex-end;gap:6px">
-    <span style="font-size:.72rem;opacity:.7">☀️ Solutions Solaires<br>Côte d'Ivoire</span>
+    <span style="font-size:.72rem;opacity:.7"> Solutions Solaires<br>Côte d'Ivoire</span>
     <button onclick="window.open(window.location.href,'_blank')" style="padding:6px 14px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.4);border-radius:7px;color:#fff;font-size:.75rem;font-weight:bold;cursor:pointer;white-space:nowrap;transition:background .2s" onmouseover="this.style.background='rgba(255,255,255,.28)'" onmouseout="this.style.background='rgba(255,255,255,.18)'">＋ Nouveau Dimensionnement</button>
-    <div id="sync-indicator" onclick="SB.pullAll().then(function(){SB.setSyncUI('ok');if(typeof render==='function')render();renderTechSelect();}).catch(function(){SB.setSyncUI('offline')})" title="Cliquer pour synchroniser" style="cursor:pointer;font-size:.7rem;display:flex;align-items:center;gap:5px;opacity:.9;background:rgba(255,255,255,.15);padding:4px 10px;border-radius:7px;color:#fff;border:1px solid rgba(255,255,255,.3)">☁️ <span style="font-size:.68rem">Sync</span></div>
+    <div id="sync-indicator" onclick="SB.pullAll().then(function(){SB.setSyncUI('ok');if(typeof render==='function')render();renderTechSelect();}).catch(function(){SB.setSyncUI('offline')})" title="Cliquer pour synchroniser" style="cursor:pointer;font-size:.7rem;display:flex;align-items:center;gap:5px;opacity:.9;background:rgba(255,255,255,.15);padding:4px 10px;border-radius:7px;color:#fff;border:1px solid rgba(255,255,255,.3)"> <span style="font-size:.68rem">Sync</span></div>
   </div>
 </header>
 <div class="section-nav" id="section-nav">
-  <button class="section-btn active" id="btn-fiche"     onclick="switchSection('fiche')">☀️ Mon Dimensionnement Solaire</button>
-  <button class="section-btn"        id="btn-dashboard" onclick="switchSection('dashboard')">📊 Dashboard</button>
+  <button class="section-btn active" id="btn-fiche"     onclick="switchSection('fiche')">Mon Dimensionnement Solaire</button>
+  <button class="section-btn"        id="btn-dashboard" onclick="switchSection('dashboard')"> Dashboard</button>
 </div>
 
 <div class="stepper" id="stepper">
-  <div class="step active" onclick="goTab(0)"><span class="step-num">1</span>👤 Client</div>
-  <div class="step" onclick="goTab(1)"><span class="step-num">2</span>⚡ Charges</div>
-  <div class="step" onclick="goTab(2)"><span class="step-num">3</span>🎯 Projet</div>
-  <div class="step" onclick="goTab(3)"><span class="step-num">4</span>📊 Dimensionnement</div>
-  <div class="step" onclick="goTab(4)"><span class="step-num">5</span>📄 Rapport</div>
-  <div class="step" id="step-dashboard" onclick="switchSection('dashboard')" style="display:none"><span class="step-num">6</span>📊 Dashboard</div>
+  <div class="step active" onclick="goTab(0)"><span class="step-num">1</span>Client</div>
+  <div class="step" onclick="goTab(1)"><span class="step-num">2</span>Charges</div>
+  <div class="step" onclick="goTab(2)"><span class="step-num">3</span>Projet</div>
+  <div class="step" onclick="goTab(3)"><span class="step-num">4</span> Dimensionnement</div>
+  <div class="step" onclick="goTab(4)"><span class="step-num">5</span> Rapport</div>
+  <div class="step" id="step-dashboard" onclick="switchSection('dashboard')" style="display:none"><span class="step-num">6</span> Dashboard</div>
 </div>
 
 <!-- ═══════════ TAB 1 : CLIENT ═══════════ -->
 <div class="tab-c active" id="tab-client">
   <div class="card">
-    <div class="sec-title">👤 Informations Client</div>
+    <div class="sec-title"> Informations Client</div>
     <div class="g3">
       <div><label>Nom complet / Raison sociale *</label><input type="text" id="cli-nom" placeholder="Ex: M. Kouamé Koffi"></div>
       <div><label>Téléphone *</label><input type="tel" id="cli-tel" placeholder="+225 07 XX XX XX XX"></div>
@@ -479,7 +479,7 @@ footer{background:var(--green-dark);color:rgba(255,255,255,.5);text-align:center
   </div>
 
   <div class="card">
-    <div class="sec-title">📍 Informations du Site</div>
+    <div class="sec-title"> Informations du Site</div>
     <div class="g3">
       <div>
         <label>Ville / Localisation *</label>
@@ -619,7 +619,7 @@ footer{background:var(--green-dark);color:rgba(255,255,255,.5);text-align:center
 
   <!-- SECTION TECHNICIEN -->
   <div class="card">
-    <div class="sec-title">👷 Technicien Commercial</div>
+    <div class="sec-title"> Technicien Commercial</div>
     <div class="g3">
       <div>
         <label>Technicien assigné *</label>
@@ -638,7 +638,7 @@ footer{background:var(--green-dark);color:rgba(255,255,255,.5);text-align:center
     </div>
     <div style="margin-top:8px;display:flex;gap:8px;align-items:center;flex-wrap:wrap">
       <button class="btn btn-outline btn-sm" onclick="addTechnicien()">＋ Enregistrer ce technicien</button>
-      <button class="btn btn-del btn-sm" onclick="removeTechnicien()" id="btn-del-tech" style="display:none">🗑 Supprimer</button>
+      <button class="btn btn-del btn-sm" onclick="removeTechnicien()" id="btn-del-tech" style="display:none"> Supprimer</button>
       <span id="tech-msg" style="font-size:.75rem;color:#3dbf6e;font-weight:bold"></span>
     </div>
   </div>
@@ -652,21 +652,21 @@ footer{background:var(--green-dark);color:rgba(255,255,255,.5);text-align:center
 <!-- ═══════════ TAB 2 : CHARGES ═══════════ -->
 <div class="tab-c" id="tab-charges">
   <div class="card">
-    <div class="sec-title">⚡ Bilan de Consommation Électrique</div>
+    <div class="sec-title"> Bilan de Consommation Électrique</div>
 
     <div class="info-box blue">
-      <b>📌 Instructions :</b> Listez tous les équipements électriques du client. Indiquez la puissance (W), la quantité, le nombre d'heures d'utilisation par jour et les jours par semaine. Cochez "Critique" pour les charges prioritaires (backup).
+      <b> Instructions :</b> Listez tous les équipements électriques du client. Indiquez la puissance (W), la quantité, le nombre d'heures d'utilisation par jour et les jours par semaine. Cochez "Critique" pour les charges prioritaires (backup).
     </div>
 
     <div class="tpl-bar">
       <span style="font-size:.75rem;font-weight:bold;color:#888;margin-right:4px">Modèles rapides :</span>
-      <button class="tpl-btn" onclick="loadTemplate('maison')">🏠 Maison Standard</button>
-      <button class="tpl-btn" onclick="loadTemplate('villa')">🏡 Villa</button>
-      <button class="tpl-btn" onclick="loadTemplate('bureau')">🏢 Bureau PME</button>
-      <button class="tpl-btn" onclick="loadTemplate('commerce')">🏪 Commerce</button>
-      <button class="tpl-btn" onclick="loadTemplate('villa_clim')">❄️ Villa + Clim</button>
-      <button class="tpl-btn" onclick="openCatalog()" style="background:var(--orange);color:#fff;border-color:var(--orange)">📚 Catalogue équipements</button>
-      <button class="tpl-btn btn-del btn-sm" onclick="clearLoads()">🗑 Vider</button>
+      <button class="tpl-btn" onclick="loadTemplate('maison')"> Maison Standard</button>
+      <button class="tpl-btn" onclick="loadTemplate('villa')"> Villa</button>
+      <button class="tpl-btn" onclick="loadTemplate('bureau')"> Bureau PME</button>
+      <button class="tpl-btn" onclick="loadTemplate('commerce')"> Commerce</button>
+      <button class="tpl-btn" onclick="loadTemplate('villa_clim')"> Villa + Clim</button>
+      <button class="tpl-btn" onclick="openCatalog()" style="background:var(--orange);color:#fff;border-color:var(--orange)"> Catalogue équipements</button>
+      <button class="tpl-btn btn-del btn-sm" onclick="clearLoads()"> Vider</button>
     </div>
 
     <!-- CATALOGUE MODAL -->
@@ -674,12 +674,12 @@ footer{background:var(--green-dark);color:rgba(255,255,255,.5);text-align:center
       <div style="background:#fff;border-radius:14px;max-width:820px;margin:0 auto;padding:22px;box-shadow:0 8px 40px rgba(0,0,0,.25)">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
           <div>
-            <div style="font-size:1.05rem;font-weight:bold;color:var(--blue-dark)">📚 Catalogue Équipements</div>
+            <div style="font-size:1.05rem;font-weight:bold;color:var(--blue-dark)"> Catalogue Équipements</div>
             <div style="font-size:.75rem;color:#888;margin-top:2px">Puissances moyennes de référence — utile si la plaque signalétique est illisible</div>
           </div>
-          <button onclick="closeCatalog()" style="background:none;border:none;font-size:1.4rem;cursor:pointer;color:#888">✕</button>
+          <button onclick="closeCatalog()" style="background:none;border:none;font-size:1.4rem;cursor:pointer;color:#888"></button>
         </div>
-        <input type="text" id="catalog-search" placeholder="🔍 Rechercher un équipement…" oninput="filterCatalog()"
+        <input type="text" id="catalog-search" placeholder=" Rechercher un équipement…" oninput="filterCatalog()"
           style="width:100%;margin-bottom:12px;padding:9px 12px;border:1.5px solid var(--blue-light);border-radius:8px;font-size:.85rem">
         <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px" id="cat-filter-btns">
           <button class="tpl-btn cat-filter-btn active-cat" data-cat="" onclick="setCatFilter(this,'')">Tous</button>
@@ -751,20 +751,20 @@ footer{background:var(--green-dark);color:rgba(255,255,255,.5);text-align:center
 <!-- ═══════════ TAB 3 : PROJET ═══════════ -->
 <div class="tab-c" id="tab-projet">
   <div class="card">
-    <div class="sec-title">🔌 Type de Système Solaire</div>
+    <div class="sec-title"> Type de Système Solaire</div>
     <div class="grid-opts" id="grid-opts">
       <div class="g-opt sel" onclick="selectGrid('off-grid',this)">
-        <div class="gicon">🔋</div>
+        <div class="gicon"></div>
         <h3>Off-Grid (Autonome)</h3>
         <p>Aucun raccordement réseau. Le solaire + batteries couvrent 100% des besoins. Idéal zone rurale.</p>
       </div>
       <div class="g-opt" onclick="selectGrid('on-grid',this)">
-        <div class="gicon">⚡</div>
+        <div class="gicon"></div>
         <h3>On-Grid (Réseau)</h3>
         <p>Raccordé au réseau CIE. Le solaire réduit la facture selon le taux de couverture choisi.</p>
       </div>
       <div class="g-opt" onclick="selectGrid('hybride',this)">
-        <div class="gicon">⚡🔋</div>
+        <div class="gicon"></div>
         <h3>Hybride</h3>
         <p>Réseau + solaire + batteries. Autonomie nocturne + délestage et backup en cas de coupure.</p>
       </div>
@@ -773,15 +773,15 @@ footer{background:var(--green-dark);color:rgba(255,255,255,.5);text-align:center
 
   <!-- ON-GRID COVERAGE (shown only for on-grid/hybride) -->
   <div class="card" id="coverage-card" style="display:none">
-    <div class="sec-title">🎯 Objectif du Client — Taux de Couverture Solaire</div>
+    <div class="sec-title"> Objectif du Client — Taux de Couverture Solaire</div>
     <div class="info-box blue">En mode On-Grid, définissez la part de consommation que le solaire doit couvrir. Le reste sera fourni par le réseau CIE.</div>
     <div class="cov-btns" id="cov-btns">
-      <button class="cov-b" onclick="setCov(50,this)">☀️ 50%</button>
-      <button class="cov-b" onclick="setCov(70,this)">☀️ 70%</button>
-      <button class="cov-b" onclick="setCov(80,this)">☀️ 80%</button>
-      <button class="cov-b sel" onclick="setCov(90,this)">☀️ 90%</button>
-      <button class="cov-b" onclick="setCov(100,this)">☀️ 100%</button>
-      <button class="cov-b bk" onclick="setCov('backup',this)">🛡 Backup (critique)</button>
+      <button class="cov-b" onclick="setCov(50,this)"> 50%</button>
+      <button class="cov-b" onclick="setCov(70,this)"> 70%</button>
+      <button class="cov-b" onclick="setCov(80,this)"> 80%</button>
+      <button class="cov-b sel" onclick="setCov(90,this)"> 90%</button>
+      <button class="cov-b" onclick="setCov(100,this)"> 100%</button>
+      <button class="cov-b bk" onclick="setCov('backup',this)"> Backup (critique)</button>
     </div>
     <div id="cov-desc" style="margin-top:10px;font-size:.8rem;color:#555;padding:8px 12px;background:var(--blue-pale);border-radius:6px">
       Le solaire couvrira <b id="cov-pct">90%</b> de la consommation journalière.
@@ -789,7 +789,7 @@ footer{background:var(--green-dark);color:rgba(255,255,255,.5);text-align:center
   </div>
 
   <div class="card">
-    <div class="sec-title">🔋 Stockage &amp; Autonomie</div>
+    <div class="sec-title"> Stockage &amp; Autonomie</div>
 
     <!-- Explication dynamique selon le mode -->
     <div id="bat-mode-info" class="info-box blue" style="margin-bottom:12px"></div>
@@ -830,7 +830,7 @@ footer{background:var(--green-dark);color:rgba(255,255,255,.5);text-align:center
       <div>
         <label>Préférence onduleur</label>
         <select id="inv-pref">
-          <option value="auto">🤖 Automatique (recommandé)</option>
+          <option value="auto"> Automatique (recommandé)</option>
           <option value="3.5kW">Higon 3.5 kW (≤3.5 kW)</option>
           <option value="5.5kW">Higon 5.5 kW (≤5.5 kW)</option>
           <option value="10kW">Higon 10 kW (≤10 kW)</option>
@@ -840,7 +840,7 @@ footer{background:var(--green-dark);color:rgba(255,255,255,.5);text-align:center
   </div>
 
   <div class="card">
-    <div class="sec-title">☀️ Panneau &amp; Paramètres Avancés</div>
+    <div class="sec-title"> Panneau &amp; Paramètres Avancés</div>
     <div class="g3">
       <div>
         <label>Panneau solaire sélectionné</label>
@@ -874,12 +874,12 @@ footer{background:var(--green-dark);color:rgba(255,255,255,.5);text-align:center
 
   <!-- FACTURES CIE -->
   <div class="card" id="bills-card">
-    <div class="sec-title">💡 Facturation CIE Actuelle — ROI basé sur factures réelles
+    <div class="sec-title"> Facturation CIE Actuelle — ROI basé sur factures réelles
       <span class="roi-source-badge roi-real" style="vertical-align:middle">Recommandé On-Grid</span>
     </div>
     <div class="info-box green">
-      <b>📊 Pour un ROI précis :</b> saisir les 3 dernières factures CIE du client.
-      <b>⚠ La CIE facture tous les 2 mois (bimestrielle)</b> — chaque relevé couvre 2 mois de consommation.
+      <b> Pour un ROI précis :</b> saisir les 3 dernières factures CIE du client.
+      <b> La CIE facture tous les 2 mois (bimestrielle)</b> — chaque relevé couvre 2 mois de consommation.
       Le système calcule automatiquement les économies réelles et le retour sur investissement.
     </div>
 
@@ -917,7 +917,7 @@ footer{background:var(--green-dark);color:rgba(255,255,255,.5);text-align:center
     </div>
 
     <div class="roi-live" id="roi-live-block" style="display:none">
-      <div style="font-size:.85rem;font-weight:bold;opacity:.9">📈 Simulation ROI — Basée sur factures réelles client</div>
+      <div style="font-size:.85rem;font-weight:bold;opacity:.9"> Simulation ROI — Basée sur factures réelles client</div>
       <div class="roi-live-grid" id="roi-live-grid"></div>
       <div class="gain-bar-wrap" id="roi-bar-wrap"></div>
       <div class="years-timeline" id="roi-years"></div>
@@ -926,14 +926,14 @@ footer{background:var(--green-dark);color:rgba(255,255,255,.5);text-align:center
 
   <div class="nav-row">
     <button class="btn btn-outline" onclick="goTab(1)">← Retour</button>
-    <button class="btn btn-o" onclick="compute();goTab(3)">🔢 Calculer le dimensionnement →</button>
+    <button class="btn btn-o" onclick="compute();goTab(3)"> Calculer le dimensionnement →</button>
   </div>
 </div>
 
 <!-- ═══════════ TAB 4 : DIMENSIONNEMENT ═══════════ -->
 <div class="tab-c" id="tab-dim">
   <div id="dim-empty" class="card" style="text-align:center;padding:40px;color:#aaa">
-    <div style="font-size:3rem;margin-bottom:10px">📊</div>
+    <div style="font-size:3rem;margin-bottom:10px"></div>
     <p>Complétez les étapes précédentes et cliquez sur <b>Calculer</b></p>
     <button class="btn btn-o" style="margin-top:14px" onclick="goTab(2)">← Aller à la configuration</button>
   </div>
@@ -948,22 +948,22 @@ footer{background:var(--green-dark);color:rgba(255,255,255,.5);text-align:center
       <!-- LEFT: PV + Battery -->
       <div style="flex:1;min-width:300px">
         <div class="card">
-          <div class="sec-title">☀️ Générateur Photovoltaïque</div>
+          <div class="sec-title"> Générateur Photovoltaïque</div>
           <div id="pv-detail"></div>
         </div>
         <div class="card" id="bat-card">
-          <div class="sec-title">🔋 Système de Stockage</div>
+          <div class="sec-title"> Système de Stockage</div>
           <div id="bat-detail"></div>
         </div>
       </div>
       <!-- RIGHT: Inverter + Production -->
       <div style="flex:1;min-width:300px">
         <div class="card">
-          <div class="sec-title">🔌 Onduleur(s) Recommandé(s)</div>
+          <div class="sec-title"> Onduleur(s) Recommandé(s)</div>
           <div id="inv-detail"></div>
         </div>
         <div class="card">
-          <div class="sec-title">📈 Production &amp; Économies</div>
+          <div class="sec-title"> Production &amp; Économies</div>
           <div id="eco-detail"></div>
         </div>
       </div>
@@ -971,7 +971,7 @@ footer{background:var(--green-dark);color:rgba(255,255,255,.5);text-align:center
 
     <!-- COMPATIBILITY CHECKS -->
     <div class="card">
-      <div class="sec-title">✅ Vérifications de Compatibilité</div>
+      <div class="sec-title"> Vérifications de Compatibilité</div>
       <table class="ctable" id="checks-tbl">
         <thead><tr><th>Paramètre</th><th>Valeur</th><th>Limite</th><th>Statut</th><th>Détail</th></tr></thead>
         <tbody id="checks-body"></tbody>
@@ -980,7 +980,7 @@ footer{background:var(--green-dark);color:rgba(255,255,255,.5);text-align:center
 
     <!-- ROI CARD -->
     <div class="card" id="roi-card" style="display:none">
-      <div class="sec-title">💰 Analyse de Rentabilité — ROI Détaillé
+      <div class="sec-title"> Analyse de Rentabilité — ROI Détaillé
         <span class="roi-source-badge" id="roi-card-badge" style="vertical-align:middle"></span>
       </div>
       <div id="roi-card-content"></div>
@@ -988,7 +988,7 @@ footer{background:var(--green-dark);color:rgba(255,255,255,.5);text-align:center
 
     <!-- BOM -->
     <div class="card">
-      <div class="sec-title">📦 Liste des Équipements (BOM indicative)</div>
+      <div class="sec-title"> Liste des Équipements (BOM indicative)</div>
       <table class="rpt-table" id="bom-tbl">
         <thead><tr><th>Désignation</th><th>Référence</th><th>Qté</th><th>Unité</th></tr></thead>
         <tbody id="bom-body"></tbody>
@@ -998,7 +998,7 @@ footer{background:var(--green-dark);color:rgba(255,255,255,.5);text-align:center
     <!-- ALTERNATIVES LOCALES -->
     <div class="card" id="alt-local-card" style="display:none">
       <div class="sec-title" style="cursor:pointer" onclick="toggleAltLocal()">
-        🔄 Alternatives Localement Disponibles (rupture de stock)
+         Alternatives Localement Disponibles (rupture de stock)
         <span id="alt-toggle-icon" style="float:right;font-size:.85rem;color:var(--blue-mid)">▼ Afficher</span>
       </div>
       <div id="alt-local-body" style="display:none">
@@ -1013,15 +1013,15 @@ footer{background:var(--green-dark);color:rgba(255,255,255,.5);text-align:center
 
     <!-- PACKS TEVIA RECOMMANDÉS -->
     <div class="card" id="pack-recommandations" style="display:none">
-      <div class="sec-title">📦 Packs TEVIA Recommandés — Correspondance au Dimensionnement</div>
+      <div class="sec-title"> Packs TEVIA Recommandés — Correspondance au Dimensionnement</div>
       <div id="pack-reco-content"></div>
     </div>
 
         <div class="nav-row">
       <button class="btn btn-outline" onclick="goTab(2)">← Reconfigurer</button>
       <div style="display:flex;gap:10px">
-        <button class="btn btn-o" onclick="compute()">🔄 Recalculer</button>
-        <button class="btn btn-g" onclick="buildReport();goTab(4)">📄 Générer le Rapport →</button>
+        <button class="btn btn-o" onclick="compute()"> Recalculer</button>
+        <button class="btn btn-g" onclick="buildReport();goTab(4)"> Générer le Rapport →</button>
       </div>
     </div>
   </div>
@@ -1030,24 +1030,24 @@ footer{background:var(--green-dark);color:rgba(255,255,255,.5);text-align:center
 <!-- ═══════════ TAB 5 : RAPPORT ═══════════ -->
 <div class="tab-c" id="tab-rapport">
   <div style="margin-bottom:14px;display:flex;gap:10px;flex-wrap:wrap;align-items:center">
-    <button class="btn btn-p" onclick="window.print()">🖨 Imprimer / PDF</button>
-    <button class="btn btn-g" onclick="saveReport()" id="btn-save-report" style="background:linear-gradient(135deg,#1a5c30,#3dbf6e)">💾 Sauvegarder dans la base</button>
+    <button class="btn btn-p" onclick="window.print()"> Imprimer / PDF</button>
+    <button class="btn btn-g" onclick="saveReport()" id="btn-save-report" style="background:linear-gradient(135deg,#1a5c30,#3dbf6e)"> Sauvegarder dans la base</button>
     <button class="btn btn-outline" onclick="goTab(3)">← Retour aux résultats</button>
-    <a href="#" onclick="switchSection('dashboard'); return false;" class="btn btn-outline" style="border-color:#3dbf6e;color:#1a5c30">📊 Voir le Tableau de Bord</a>
+    <a href="#" onclick="switchSection('dashboard'); return false;" class="btn btn-outline" style="border-color:#3dbf6e;color:#1a5c30"> Voir le Tableau de Bord</a>
     <span style="font-size:.75rem;color:#888">Ctrl+P pour exporter en PDF</span>
   </div>
   <div id="save-toast" style="display:none;background:#1a5c30;color:#fff;padding:10px 18px;border-radius:8px;font-size:.85rem;font-weight:bold;margin-bottom:10px">
-    ✅ Rapport sauvegardé dans la base de données GREENO CI !
+     Rapport sauvegardé dans la base de données GREENO CI !
   </div>
   <div class="rpt" id="rapport-content">
     <div style="text-align:center;padding:30px;color:#aaa">
-      <div style="font-size:2.5rem">📄</div>
+      <div style="font-size:2.5rem"></div>
       <p style="margin-top:10px">Complétez les étapes et cliquez sur <b>Générer le Rapport</b> dans l'onglet Dimensionnement.</p>
     </div>
   </div>
 </div>
 
-<footer>GREENO CI — Mon Dimensionnement Solaire · Panneaux HIGON 650Wc · Onduleurs Higon · Calculs STC 25°C · Source irradiation : PVGIS / NASA-SSE &nbsp;|&nbsp; <a href="#" onclick="switchSection('dashboard'); return false;" style="color:#3dbf6e;font-weight:bold">📊 Tableau de Bord</a></footer>
+<footer>GREENO CI — Mon Dimensionnement Solaire · Panneaux HIGON 650Wc · Onduleurs Higon · Calculs STC 25°C · Source irradiation : PVGIS / NASA-SSE &nbsp;|&nbsp; <a href="#" onclick="switchSection('dashboard'); return false;" style="color:#3dbf6e;font-weight:bold"> Tableau de Bord</a></footer>
 
 <script>
 // ─── DONNÉES DE RÉFÉRENCE ────────────────────────────────────────────
@@ -1140,28 +1140,28 @@ const LOADS_DB = [
 // ─── ALTERNATIVES LOCALES ÉQUIPEMENTS ──────────────────────────────────
 const LOCAL_ALT = {
   panels:[
-    {nom:'HIGON HGN-66HC10B',  P:650, note:'Standard HITTO SOLAR — Réf. principale', dispo:'✅ Stock'},
-    {nom:'JA Solar JAM72S30',  P:540, note:'Polyvalent — Disponible localement (CI)',  dispo:'✅ Abidjan'},
-    {nom:'Canadian Solar HiKu',P:600, note:'Bonne fiabilité — distributeurs Abidjan', dispo:'✅ Abidjan'},
-    {nom:'Amerisolar AS-6M',   P:450, note:'Entrée de gamme — prix marché',           dispo:'⚠ Selon stock'},
-    {nom:'Phono Solar PS450M', P:450, note:'Disponible localement',                   dispo:'⚠ Selon stock'},
+    {nom:'HIGON HGN-66HC10B',  P:650, note:'Standard HITTO SOLAR — Réf. principale', dispo:'Dispo.'},
+    {nom:'JA Solar JAM72S30',  P:540, note:'Polyvalent — Disponible localement (CI)',  dispo:'Abidjan'},
+    {nom:'Canadian Solar HiKu',P:600, note:'Bonne fiabilité — distributeurs Abidjan', dispo:'Abidjan'},
+    {nom:'Amerisolar AS-6M',   P:450, note:'Entrée de gamme — prix marché',           dispo:'Sur demande'},
+    {nom:'Phono Solar PS450M', P:450, note:'Disponible localement',                   dispo:'Sur demande'},
   ],
   inverters:[
-    {nom:'Higon 3.5 kW',  type:'Hybride 24V', note:'Réf. HITTO SOLAR',         dispo:'✅ Stock'},
-    {nom:'Higon 5.5 kW',  type:'Hybride 48V', note:'Réf. HITTO SOLAR',         dispo:'✅ Stock'},
-    {nom:'Higon 10 kW',   type:'Hybride 48V', note:'Réf. HITTO SOLAR',         dispo:'✅ Stock'},
-    {nom:'Deye SUN-5K-SG01LP', type:'Hybride 48V 5kW', note:'Alternatives populaire CI', dispo:'✅ Abidjan'},
-    {nom:'Growatt SPF 5000TL',  type:'Hybride 48V 5kW', note:'Large réseau SAV',          dispo:'✅ Abidjan'},
-    {nom:'Victron MultiPlus 3kVA', type:'Off-grid 24V', note:'Qualité européenne premium', dispo:'⚠ Commande'},
-    {nom:'Solis Hybride 5kW',  type:'On-grid/Hybride', note:'Rapport qualité/prix',       dispo:'⚠ Selon stock'},
+    {nom:'Higon 3.5 kW',  type:'Hybride 24V', note:'Réf. HITTO SOLAR',         dispo:'Dispo.'},
+    {nom:'Higon 5.5 kW',  type:'Hybride 48V', note:'Réf. HITTO SOLAR',         dispo:'Dispo.'},
+    {nom:'Higon 10 kW',   type:'Hybride 48V', note:'Réf. HITTO SOLAR',         dispo:'Dispo.'},
+    {nom:'Deye SUN-5K-SG01LP', type:'Hybride 48V 5kW', note:'Alternatives populaire CI', dispo:'Abidjan'},
+    {nom:'Growatt SPF 5000TL',  type:'Hybride 48V 5kW', note:'Large réseau SAV',          dispo:'Abidjan'},
+    {nom:'Victron MultiPlus 3kVA', type:'Off-grid 24V', note:'Qualité européenne premium', dispo:' Commande'},
+    {nom:'Solis Hybride 5kW',  type:'On-grid/Hybride', note:'Rapport qualité/prix',       dispo:'Sur demande'},
   ],
   batteries:[
-    {nom:'Higon LiFePO4 51.2V/200Ah', kWh:10.24, note:'Réf. HITTO SOLAR 5.5 & 10kW', dispo:'✅ Stock'},
-    {nom:'Higon LiFePO4 25.6V/200Ah', kWh:5.12,  note:'Réf. HITTO SOLAR 3.5kW',      dispo:'✅ Stock'},
-    {nom:'Pylontech US3000C',          kWh:3.55,  note:'Premium BMS intégré — 48V',   dispo:'✅ Abidjan'},
-    {nom:'RITAR RA12-200',             kWh:2.4,   note:'Plomb-acide 12V/200Ah',        dispo:'✅ CI (marché)'},
-    {nom:'Narada VRLA 12V/200Ah',      kWh:2.4,   note:'Plomb-acide VRLA',             dispo:'✅ CI (marché)'},
-    {nom:'Gel batterie OPzV 2V/500Ah', kWh:1.0,   note:'Longue durée (telecom/ind.)',  dispo:'⚠ Commande'},
+    {nom:'Higon LiFePO4 51.2V/200Ah', kWh:10.24, note:'Réf. HITTO SOLAR 5.5 & 10kW', dispo:'Dispo.'},
+    {nom:'Higon LiFePO4 25.6V/200Ah', kWh:5.12,  note:'Réf. HITTO SOLAR 3.5kW',      dispo:'Dispo.'},
+    {nom:'Pylontech US3000C',          kWh:3.55,  note:'Premium BMS intégré — 48V',   dispo:'Abidjan'},
+    {nom:'RITAR RA12-200',             kWh:2.4,   note:'Plomb-acide 12V/200Ah',        dispo:' CI (marché)'},
+    {nom:'Narada VRLA 12V/200Ah',      kWh:2.4,   note:'Plomb-acide VRLA',             dispo:' CI (marché)'},
+    {nom:'Gel batterie OPzV 2V/500Ah', kWh:1.0,   note:'Longue durée (telecom/ind.)',  dispo:' Commande'},
   ]
 };
 
@@ -1224,8 +1224,8 @@ var SB = (function(){
     if (!el) return;
     var cfg = {
       loading: { icon: '⏳', txt: 'Chargement…', color: '#888' },
-      ok:      { icon: '☁️', txt: 'Synchronisé',  color: '#4caf50' },
-      offline: { icon: '⚠️', txt: 'Hors-ligne',   color: '#ff9800' }
+      ok:      { icon: '', txt: 'Synchronisé',  color: '#4caf50' },
+      offline: { icon: '', txt: 'Hors-ligne',   color: '#ff9800' }
     };
     var c = cfg[state] || cfg.offline;
     el.innerHTML = c.icon + ' <span style="color:' + c.color + ';font-size:.68rem">' + c.txt + '</span>';
@@ -1266,7 +1266,7 @@ function addTechnicien(){
   const nom=(document.getElementById('tech-nom')?.value||'').trim();
   const tel=(document.getElementById('tech-tel')?.value||'').trim();
   const msg=document.getElementById('tech-msg');
-  if(!nom){if(msg)msg.textContent='⚠ Veuillez saisir un nom.';return;}
+  if(!nom){if(msg)msg.textContent=' Veuillez saisir un nom.';return;}
   const techs=getTechs();
   if(techs.find(t=>t.nom===nom&&t.tel===tel)){if(msg)msg.textContent='Technicien déjà enregistré.';return;}
   techs.push({nom,tel});
@@ -1276,7 +1276,7 @@ function addTechnicien(){
   if(sel)sel.value=String(techs.length-1);
   const btnDel=document.getElementById('btn-del-tech');
   if(btnDel)btnDel.style.display='inline-block';
-  if(msg){msg.textContent='✅ Technicien enregistré !';setTimeout(()=>{msg.textContent='';},3000);}
+  if(msg){msg.textContent=' Technicien enregistré !';setTimeout(()=>{msg.textContent='';},3000);}
 }
 
 function removeTechnicien(){
@@ -1429,7 +1429,7 @@ function validateClient(){
         wrap.classList.add('field-error');
         const msg = document.createElement('div');
         msg.className = 'field-error-msg';
-        msg.innerHTML = '⚠️ Champ obligatoire';
+        msg.innerHTML = ' Champ obligatoire';
         wrap.appendChild(msg);
       }
     }
@@ -1439,7 +1439,7 @@ function validateClient(){
     const banner = document.createElement('div');
     banner.id = 'validation-banner';
     banner.className = 'validation-banner';
-    banner.innerHTML = '⛔ Veuillez renseigner les champs obligatoires avant de continuer : <strong>' + missing.join(', ') + '</strong>';
+    banner.innerHTML = ' Veuillez renseigner les champs obligatoires avant de continuer : <strong>' + missing.join(', ') + '</strong>';
     const tabEl = document.getElementById('tab-client');
     tabEl.insertBefore(banner, tabEl.firstChild);
     tabEl.scrollIntoView({behavior:'smooth', block:'start'});
@@ -1516,10 +1516,10 @@ function updateBatModeInfo(){
   if(type==='hybride'){
     const hf=parseFloat(document.getElementById('hybrid-factor')?.value)||0.5;
     const pct=Math.round(hf*100);
-    info.innerHTML=`<b>🔋 Mode Hybride :</b> La batterie couvre <b>${pct}% de la consommation</b> (usage nocturne / délestages). Le réseau CIE assure le reste. Autonomie : <b>${days} j</b> sans soleil.`;
+    info.innerHTML=`<b> Mode Hybride :</b> La batterie couvre <b>${pct}% de la consommation</b> (usage nocturne / délestages). Le réseau CIE assure le reste. Autonomie : <b>${days} j</b> sans soleil.`;
     info.style.display='block';
   } else if(type==='off-grid'){
-    info.innerHTML=`<b>🔋 Mode Off-Grid :</b> La batterie couvre <b>100% des besoins</b> pendant <b>${days} jour(s)</b> sans production solaire.`;
+    info.innerHTML=`<b> Mode Off-Grid :</b> La batterie couvre <b>100% des besoins</b> pendant <b>${days} jour(s)</b> sans production solaire.`;
     info.style.display='block';
   } else {
     info.style.display='none';
@@ -1562,7 +1562,7 @@ function addLoad(data){
     <td><input type="number" value="${d.days}" min="1" max="7" step="1" onchange="updateBilan()"></td>
     <td style="text-align:center"><input type="checkbox" ${d.crit?'checked':''} onchange="updateBilan()" title="Charge critique (backup)"></td>
     <td class="wh-cell" id="wh-${id}">—</td>
-    <td><button class="btn btn-del btn-sm" onclick="removeLoad('${id}')">✕</button></td>`;
+    <td><button class="btn btn-del btn-sm" onclick="removeLoad('${id}')"></button></td>`;
   tbody.appendChild(tr);
   updateBilan();
 }
@@ -1735,7 +1735,7 @@ function renderAltLocal(r){
 
   // Panneaux
   document.getElementById('alt-panels-section').innerHTML=`
-    <div style="font-weight:bold;font-size:.85rem;color:var(--blue-dark);margin-bottom:6px">☀️ Panneaux solaires alternatifs</div>
+    <div style="font-weight:bold;font-size:.85rem;color:var(--blue-dark);margin-bottom:6px"> Panneaux solaires alternatifs</div>
     <table class="alt-table">
       <thead><tr><th>Modèle</th><th>Puissance</th><th>Remarque</th><th>Disponibilité CI</th></tr></thead>
       <tbody>${LOCAL_ALT.panels.map(p=>`
@@ -1743,14 +1743,14 @@ function renderAltLocal(r){
           <td><b>${p.nom}</b></td>
           <td>${p.P} Wc</td>
           <td>${p.note}</td>
-          <td class="${p.dispo.startsWith('✅')?'dispo-ok':'dispo-warn'}">${p.dispo}</td>
+          <td class="${p.dispo.startsWith('')?'dispo-ok':'dispo-warn'}">${p.dispo}</td>
         </tr>`).join('')}
       </tbody>
     </table>`;
 
   // Onduleurs
   document.getElementById('alt-inv-section').innerHTML=`
-    <div style="font-weight:bold;font-size:.85rem;color:var(--blue-dark);margin-bottom:6px">⚡ Onduleurs alternatifs (gamme ${r.inv.P_kW} kW)</div>
+    <div style="font-weight:bold;font-size:.85rem;color:var(--blue-dark);margin-bottom:6px"> Onduleurs alternatifs (gamme ${r.inv.P_kW} kW)</div>
     <table class="alt-table">
       <thead><tr><th>Modèle</th><th>Type</th><th>Remarque</th><th>Disponibilité CI</th></tr></thead>
       <tbody>${LOCAL_ALT.inverters.map(i=>`
@@ -1758,7 +1758,7 @@ function renderAltLocal(r){
           <td><b>${i.nom}</b></td>
           <td>${i.type}</td>
           <td>${i.note}</td>
-          <td class="${i.dispo.startsWith('✅')?'dispo-ok':'dispo-warn'}">${i.dispo}</td>
+          <td class="${i.dispo.startsWith('')?'dispo-ok':'dispo-warn'}">${i.dispo}</td>
         </tr>`).join('')}
       </tbody>
     </table>`;
@@ -1766,7 +1766,7 @@ function renderAltLocal(r){
   // Batteries (si applicable)
   if(r.usesBat){
     document.getElementById('alt-bat-section').innerHTML=`
-      <div style="font-weight:bold;font-size:.85rem;color:var(--blue-dark);margin-bottom:6px">🔋 Batteries alternatives</div>
+      <div style="font-weight:bold;font-size:.85rem;color:var(--blue-dark);margin-bottom:6px">Batteries alternatives</div>
       <table class="alt-table">
         <thead><tr><th>Modèle</th><th>Capacité</th><th>Remarque</th><th>Disponibilité CI</th></tr></thead>
         <tbody>${LOCAL_ALT.batteries.map(b=>`
@@ -1774,7 +1774,7 @@ function renderAltLocal(r){
             <td><b>${b.nom}</b></td>
             <td>${b.kWh} kWh</td>
             <td>${b.note}</td>
-            <td class="${b.dispo.startsWith('✅')?'dispo-ok':'dispo-warn'}">${b.dispo}</td>
+            <td class="${b.dispo.startsWith('')?'dispo-ok':'dispo-warn'}">${b.dispo}</td>
           </tr>`).join('')}
         </tbody>
       </table>`;
@@ -1992,9 +1992,9 @@ function renderResults(r){
   // Alert banner
   const alertDiv=document.getElementById('dim-alert');
   const issues=[];
-  if(r.ratio<0.9) issues.push({cl:'orange',msg:`⚠ Ratio DC/AC = ${r.ratio.toFixed(2)}× (inférieur à 1.0× recommandé)`});
-  if(r.Voc_s>=PANEL.Vmax) issues.push({cl:'red',msg:`🚫 BLOQUANT — Voc_string = ${r.Voc_s.toFixed(1)}V ≥ ${PANEL.Vmax}V MAX onduleur!`});
-  if(!r.usesBat&&r.gridType==='off-grid') issues.push({cl:'red',msg:`⚠ Système Off-Grid sans batterie — Pas d'autonomie nocturne!`});
+  if(r.ratio<0.9) issues.push({cl:'orange',msg:` Ratio DC/AC = ${r.ratio.toFixed(2)}× (inférieur à 1.0× recommandé)`});
+  if(r.Voc_s>=PANEL.Vmax) issues.push({cl:'red',msg:` BLOQUANT — Voc_string = ${r.Voc_s.toFixed(1)}V ≥ ${PANEL.Vmax}V MAX onduleur!`});
+  if(!r.usesBat&&r.gridType==='off-grid') issues.push({cl:'red',msg:` Système Off-Grid sans batterie — Pas d'autonomie nocturne!`});
   alertDiv.innerHTML=issues.map(i=>`<div class="info-box ${i.cl}" style="margin-bottom:8px">${i.msg}</div>`).join('');
 
   // KPI
@@ -2074,12 +2074,12 @@ function renderResults(r){
     <div class="rpt-kv"><span>Courant max entrée PV</span><span>${r.inv.imax} A</span></div>
     <div class="rpt-kv"><span>Tension batterie</span><span>${r.inv.bat_V} V</span></div>
     <div class="rpt-kv"><span>Ratio DC/AC</span><span class="${r.ratio>=1.0&&r.ratio<=1.35?'ck-ok':'ck-warn'}">${r.ratio.toFixed(3)}×</span></div>
-    ${r.n_inv>1?`<div class="info-box orange" style="margin-top:8px">⚠ ${r.n_inv} onduleurs en parallèle — Vérifier raccordement mono/triphasé (max 6 par réseau).</div>`:''}`;
+    ${r.n_inv>1?`<div class="info-box orange" style="margin-top:8px"> ${r.n_inv} onduleurs en parallèle — Vérifier raccordement mono/triphasé (max 6 par réseau).</div>`:''}`;
 
   // Eco detail
   const srcBadge=r.hasBills
-    ?'<span class="roi-source-badge roi-real">✓ Factures réelles</span>'
-    :'<span class="roi-source-badge roi-est">⚠ Estimation</span>';
+    ?'<span class="roi-source-badge roi-real"> Factures réelles</span>'
+    :'<span class="roi-source-badge roi-est"> Estimation</span>';
   document.getElementById('eco-detail').innerHTML=`
     <div class="rpt-kv"><span>PSH site (${document.getElementById('site-ville').value})</span><span>${r.psh} h/j</span></div>
     <div class="rpt-kv"><span>Performance Ratio (PR)</span><span>${(r.PR*100).toFixed(1)}%</span></div>
@@ -2095,7 +2095,7 @@ function renderResults(r){
   // ── ROI CARD DÉTAILLÉE ──────────────────────────────────────
   const roiCard=document.getElementById('roi-card');
   roiCard.style.display='block';
-  document.getElementById('roi-card-badge').textContent=r.hasBills?'✓ Basé sur factures réelles':'Estimation tarifaire';
+  document.getElementById('roi-card-badge').textContent=r.hasBills?' Basé sur factures réelles':'Estimation tarifaire';
   document.getElementById('roi-card-badge').className='roi-source-badge '+(r.hasBills?'roi-real':'roi-est');
 
   const roiBreak=r.breakEvenYear?r.breakEvenYear.y:null;
@@ -2117,7 +2117,7 @@ function renderResults(r){
       <td style="padding:3px 8px;font-weight:bold">An ${g.y}</td>
       <td style="padding:3px 8px;text-align:right">${fmtF(g.yearSav)} FCFA</td>
       <td style="padding:3px 8px;text-align:right;color:${g.cumul>=0?'#90EE90':'#FFB347'}">${g.cumul>=0?'+':''}${fmtF(g.cumul)} FCFA</td>
-      <td style="padding:3px 8px;text-align:center">${g.cumul>=0?'✅ Rentabilisé':'⏳ En cours'}</td>
+      <td style="padding:3px 8px;text-align:center">${g.cumul>=0?' Rentabilisé':'⏳ En cours'}</td>
     </tr>`).join('');
 
   document.getElementById('roi-card-content').innerHTML=`
@@ -2132,7 +2132,7 @@ function renderResults(r){
         <div class="kpi-lbl">Retour sur invest.</div>
         <div class="kpi-val">${r.roi>0?r.roi.toFixed(1):'—'}</div>
         <div class="kpi-unit">années</div>
-        <div class="kpi-sub">${r.roi>0&&r.roi<=7?'🟢 Excellent':r.roi<=10?'🟡 Bon':'🔴 Long'}</div>
+        <div class="kpi-sub">${r.roi>0&&r.roi<=7?' Excellent':r.roi<=10?' Bon':' Long'}</div>
       </div>
       <div class="kpi" style="flex:1;min-width:140px;margin:0;border-left-color:#9C27B0">
         <div class="kpi-lbl">Gain net 25 ans</div>
@@ -2150,7 +2150,7 @@ function renderResults(r){
     </div>
 
     <div class="roi-live">
-      <div style="font-size:.82rem;font-weight:bold;margin-bottom:10px;opacity:.9">📊 Projection de gains cumulés — 25 ans (dégradation –0.5%/an)</div>
+      <div style="font-size:.82rem;font-weight:bold;margin-bottom:10px;opacity:.9"> Projection de gains cumulés — 25 ans (dégradation –0.5%/an)</div>
       ${barHTML}
       <div style="margin-top:12px;overflow-x:auto">
         <table style="width:100%;border-collapse:collapse;font-size:.75rem;color:#fff;min-width:350px">
@@ -2168,22 +2168,22 @@ function renderResults(r){
 
     ${r.hasBills?`
     <div class="info-box green" style="margin-top:10px">
-      <b>✅ ROI calculé sur factures réelles</b><br>
+      <b> ROI calculé sur factures réelles</b><br>
       Factures bimestrielles : ${[r.b1,r.b2,r.b3].filter(v=>v>0).map(v=>fmtF(v)+' FCFA').join(' · ')} | Moy. bimestrielle : <b>${fmtF(r.avgBimBill)} FCFA/2 mois</b> (${fmtF(r.avgMonthlyBill)} FCFA/mois)<br>
       ${r.avgBimKwh>0?`Consommation bimestrielle moy. : ${fmtF(r.avgBimKwh)} kWh/2 mois | `:''}Tarif déduit : <b>${r.realTarif.toFixed(0)} FCFA/kWh</b>
     </div>`:`
     <div class="info-box orange" style="margin-top:10px">
-      ⚠ <b>Estimation tarifaire</b> — Pour un ROI précis, saisir les 3 dernières factures CIE du client dans l'onglet <b>Projet</b>.
+       <b>Estimation tarifaire</b> — Pour un ROI précis, saisir les 3 dernières factures CIE du client dans l'onglet <b>Projet</b>.
     </div>`}`;
 
   // Checks
   const checks=[
-    {p:'Voc_string vs Vmax_onduleur',v:`${r.Voc_s.toFixed(1)} V`,lim:`< ${PANEL.Vmax} V`,ok:r.Voc_s<PANEL.Vmax,msg:r.Voc_s<PANEL.Vmax?'✓ Conforme':'🚫 BLOQUANT — Réduire Ns'},
-    {p:'Vmp_string dans plage MPPT',v:`${r.Vmp_s.toFixed(1)} V`,lim:`${r.inv.mppt_min}–${r.inv.mppt_max} V`,ok:r.Vmp_s>=r.inv.mppt_min&&r.Vmp_s<=r.inv.mppt_max,msg:r.Vmp_s>=r.inv.mppt_min&&r.Vmp_s<=r.inv.mppt_max?'✓ Dans la plage MPPT':'⚠ Hors plage MPPT'},
-    {p:'Courant string vs Imax_entrée',v:`${PANEL.Imp} A`,lim:`≤ ${r.inv.imax} A`,ok:PANEL.Imp<=r.inv.imax,msg:PANEL.Imp<=r.inv.imax?'✓ Conforme':'⚠ Courant excessif'},
-    {p:'Ratio DC/AC',v:`${r.ratio.toFixed(3)}×`,lim:'1.00–1.35×',ok:r.ratio>=0.9&&r.ratio<=1.35,msg:r.ratio>=1.0&&r.ratio<=1.35?'✓ Optimal':r.ratio>=0.9?'⚠ Légèrement sous-dimensionné':'⚠ Revoir dimensionnement'},
-    {p:'Compatibilité batterie / onduleur',v:`${r.usesBat?r.bat_V+'V '+r.batTech:'N/A'}`,lim:r.usesBat?r.inv.bat_V+'V requis':'—',ok:!r.usesBat||(r.bat_V===r.inv.bat_V),msg:!r.usesBat?'—':r.bat_V===r.inv.bat_V?'✓ Compatible':'🚫 Tension incompatible'},
-    {p:'Nombre onduleurs en parallèle',v:`${r.n_inv}`,lim:'≤ 6 (mono) | multiple 3 (tri)',ok:r.n_inv<=6,msg:r.n_inv<=6?r.n_inv%3===0?'✓ OK mono + triphasé':'✓ OK mono | ⚠ Triphasé: préférer multiple de 3':'🚫 > 6 onduleurs — Redesigner'},
+    {p:'Voc_string vs Vmax_onduleur',v:`${r.Voc_s.toFixed(1)} V`,lim:`< ${PANEL.Vmax} V`,ok:r.Voc_s<PANEL.Vmax,msg:r.Voc_s<PANEL.Vmax?' Conforme':' BLOQUANT — Réduire Ns'},
+    {p:'Vmp_string dans plage MPPT',v:`${r.Vmp_s.toFixed(1)} V`,lim:`${r.inv.mppt_min}–${r.inv.mppt_max} V`,ok:r.Vmp_s>=r.inv.mppt_min&&r.Vmp_s<=r.inv.mppt_max,msg:r.Vmp_s>=r.inv.mppt_min&&r.Vmp_s<=r.inv.mppt_max?' Dans la plage MPPT':' Hors plage MPPT'},
+    {p:'Courant string vs Imax_entrée',v:`${PANEL.Imp} A`,lim:`≤ ${r.inv.imax} A`,ok:PANEL.Imp<=r.inv.imax,msg:PANEL.Imp<=r.inv.imax?' Conforme':' Courant excessif'},
+    {p:'Ratio DC/AC',v:`${r.ratio.toFixed(3)}×`,lim:'1.00–1.35×',ok:r.ratio>=0.9&&r.ratio<=1.35,msg:r.ratio>=1.0&&r.ratio<=1.35?' Optimal':r.ratio>=0.9?' Légèrement sous-dimensionné':' Revoir dimensionnement'},
+    {p:'Compatibilité batterie / onduleur',v:`${r.usesBat?r.bat_V+'V '+r.batTech:'N/A'}`,lim:r.usesBat?r.inv.bat_V+'V requis':'—',ok:!r.usesBat||(r.bat_V===r.inv.bat_V),msg:!r.usesBat?'—':r.bat_V===r.inv.bat_V?' Compatible':' Tension incompatible'},
+    {p:'Nombre onduleurs en parallèle',v:`${r.n_inv}`,lim:'≤ 6 (mono) | multiple 3 (tri)',ok:r.n_inv<=6,msg:r.n_inv<=6?r.n_inv%3===0?' OK mono + triphasé':' OK mono |  Triphasé: préférer multiple de 3':' > 6 onduleurs — Redesigner'},
   ];
 
   document.getElementById('checks-body').innerHTML=checks.map(c=>`
@@ -2191,7 +2191,7 @@ function renderResults(r){
       <td>${c.p}</td>
       <td><b>${c.v}</b></td>
       <td style="color:#666">${c.lim}</td>
-      <td>${c.ok?'<span class="badge ok">✓ OK</span>':'<span class="badge bad">⚠ Attention</span>'}</td>
+      <td>${c.ok?'<span class="badge ok"> OK</span>':'<span class="badge bad"> Attention</span>'}</td>
       <td class="${c.ok?'ck-ok':'ck-warn'}">${c.msg}</td>
     </tr>`).join('');
 
@@ -2279,7 +2279,7 @@ function matchPacks(kwcBesoin, kwhBesoin) {
       if (!couvre) {
         statut = '⬇ Sous-dimensionné'; badgeClass = 'badge-sous';
       } else if (maxEx <= 0.25) {
-        statut = '✅ Parfait'; badgeClass = 'badge-ok';
+        statut = ' Parfait'; badgeClass = 'badge-ok';
       } else if (maxEx <= 0.65) {
         statut = '⬆ Légèrement surdimensionné'; badgeClass = 'badge-sur';
       } else {
@@ -2332,7 +2332,7 @@ function renderPackRecommandations(r) {
   if (hasBudget) {
     const nbDansBudget = covers.filter(p => p.prix <= budgetVal).length;
     html += '<div style="margin-bottom:10px;padding:8px 12px;border-radius:8px;border-left:4px solid #1565C0;background:#e3f2fd;font-size:.82rem">'
-      + '💰 <b>Budget client : ' + budgetVal.toLocaleString('fr-FR') + ' FCFA</b> — '
+      + ' <b>Budget client : ' + budgetVal.toLocaleString('fr-FR') + ' FCFA</b> — '
       + (nbDansBudget > 0
           ? '<span style="color:#1565C0">' + nbDansBudget + ' pack(s) <b>dans le budget</b> (bordure bleue)</span>'
           : '<span style="color:#C62828">Aucun pack courant ne rentre dans ce budget.</span> Voir les packs sous-dimensionnés.')
@@ -2340,7 +2340,7 @@ function renderPackRecommandations(r) {
   }
 
   if (toShow.length === 0 && showUnder.length === 0) {
-    html += '<div class="info-box orange">⚠ Aucun pack TEVIA standard ne couvre ce besoin. Dimensionnement sur mesure requis.</div>';
+    html += '<div class="info-box orange"> Aucun pack TEVIA standard ne couvre ce besoin. Dimensionnement sur mesure requis.</div>';
   }
 
   const segColors = {A:'#2C6E49',B:'#1565C0',C:'#6A1B9A',D:'#E65100',E:'#880E4F',F:'#00695C'};
@@ -2376,8 +2376,8 @@ function renderPackRecommandations(r) {
       + '<div>'
       + '<span style="font-size:1.05rem;font-weight:bold;color:#1a1a1a">' + p.nom + '</span>'
       + ' <span style="background:' + segCol + ';color:#fff;font-size:.68rem;padding:2px 8px;border-radius:20px;font-weight:bold">Seg. ' + p.seg + ' — ' + (SEG_LABELS[p.seg] || '') + '</span>'
-      + (p.jua ? ' <span style="background:#009688;color:#fff;font-size:.68rem;padding:2px 7px;border-radius:20px">⚡ Plug&Play JUA</span>' : '')
-      + (inBudgetPack ? ' <span style="background:#1565C0;color:#fff;font-size:.65rem;padding:2px 8px;border-radius:20px">💰 Dans le budget</span>' : '')
+      + (p.jua ? ' <span style="background:#009688;color:#fff;font-size:.68rem;padding:2px 7px;border-radius:20px"> Plug&Play JUA</span>' : '')
+      + (inBudgetPack ? ' <span style="background:#1565C0;color:#fff;font-size:.65rem;padding:2px 8px;border-radius:20px"> Dans le budget</span>' : '')
       + (outBudgetPack ? ' <span style="background:#eee;color:#999;font-size:.65rem;padding:2px 8px;border-radius:20px">Hors budget</span>' : '')
       + '</div>'
       + '<span style="display:inline-block;padding:4px 12px;border-radius:20px;font-size:.78rem;font-weight:bold;background:' + bc.bg + ';border:1px solid ' + bc.border + ';color:' + bc.color + '">' + p.statut + '</span>'
@@ -2424,24 +2424,24 @@ function renderPackRecommandations(r) {
   }
 
   html += '<div style="font-size:.7rem;color:#aaa;margin-top:8px;padding:6px 10px;background:#fafafa;border-radius:6px">'
-    + '📋 Source : TEVIA_Unit_Economics_V7_OPEX_DETAIL.xlsx — Onglets "Configurations Techniques" &amp; "Unit Economics" | Prix HT marge 23% incluse'
+    + ' Source : TEVIA_Unit_Economics_V7_OPEX_DETAIL.xlsx — Onglets "Configurations Techniques" &amp; "Unit Economics" | Prix HT marge 23% incluse'
     + '</div>';
 
   // ─── Option "sans pack" ───
   html += '<div style="margin-top:10px;padding:10px 14px;border-radius:8px;border:1px dashed #bbb;background:#fafafa;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">'
     + '<span style="font-size:.78rem;color:#888">Vous pouvez générer le rapport <b>sans sélectionner de pack</b> — le coût affiché sera une estimation technique.</span>'
-    + '<button onclick="buildReport();goTab(4)" style="padding:6px 14px;border:1px solid #888;border-radius:6px;background:#fff;color:#555;font-size:.76rem;cursor:pointer;white-space:nowrap">📄 Rapport sans pack →</button>'
+    + '<button onclick="buildReport();goTab(4)" style="padding:6px 14px;border:1px solid #888;border-radius:6px;background:#fff;color:#555;font-size:.76rem;cursor:pointer;white-space:nowrap"> Rapport sans pack →</button>'
     + '</div>';
 
   // ─── Bannière pack sélectionné ───
   html += '<div id="pack-selection-banner" style="display:none;margin-top:14px;padding:12px 16px;border-radius:10px;background:linear-gradient(135deg,#e8f5e9,#f0faf0);border:2px solid #4CAF50">'
     + '<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">'
-    + '<div><span style="font-size:.9rem;font-weight:bold;color:#1a5c30">✅ Pack sélectionné pour le devis :</span> '
+    + '<div><span style="font-size:.9rem;font-weight:bold;color:#1a5c30"> Pack sélectionné pour le devis :</span> '
     + '<span id="pack-selected-nom" style="font-size:.95rem;font-weight:bold;color:#2E7D32"></span> — '
     + '<span id="pack-selected-prix" style="font-weight:bold;color:#1a5c30;font-size:.9rem"></span>'
     + '</div>'
     + '<button onclick="STATE.selectedPack=null;document.getElementById(\'pack-selection-banner\').style.display=\'none\';document.querySelectorAll(\'.pack-select-btn\').forEach(b=>{b.textContent=\'Sélectionner pour le devis\';b.style.background=\'\'});renderPackSelectionBanner()" '
-    + 'style="padding:4px 12px;border:1px solid #C62828;border-radius:6px;background:#fff;color:#C62828;font-size:.75rem;cursor:pointer">✕ Changer de pack</button>'
+    + 'style="padding:4px 12px;border:1px solid #C62828;border-radius:6px;background:#fff;color:#C62828;font-size:.75rem;cursor:pointer"> Changer de pack</button>'
     + '</div>'
     + '<div id="pack-selected-config" style="font-size:.72rem;color:#555;margin-top:4px;font-style:italic"></div>'
     + '</div>';
@@ -2461,7 +2461,7 @@ function selectPack(nom) {
   // Boutons visuels
   document.querySelectorAll('.pack-select-btn').forEach(btn => {
     const isMe = btn.dataset.nom === nom;
-    btn.textContent = isMe ? '✅ Sélectionné' : 'Sélectionner pour le devis';
+    btn.textContent = isMe ? ' Sélectionné' : 'Sélectionner pour le devis';
     btn.style.background = isMe ? '#4CAF50' : '';
     btn.style.color = isMe ? '#fff' : '';
   });
@@ -2485,7 +2485,7 @@ function renderPackSelectionBanner() {
   // Synchroniser les boutons
   document.querySelectorAll('.pack-select-btn').forEach(btn => {
     const isMe = btn.dataset.nom === p.nom;
-    btn.textContent = isMe ? '✅ Sélectionné' : 'Sélectionner pour le devis';
+    btn.textContent = isMe ? ' Sélectionné' : 'Sélectionner pour le devis';
     btn.style.background = isMe ? '#4CAF50' : '';
     btn.style.color = isMe ? '#fff' : '';
   });
@@ -2569,9 +2569,9 @@ function saveReport(){
   const toast = document.getElementById('save-toast');
   toast.style.display = 'block';
   const btn = document.getElementById('btn-save-report');
-  btn.textContent = '✅ Sauvegardé !';
+  btn.textContent = ' Sauvegardé !';
   btn.style.opacity = '.7';
-  setTimeout(()=>{ toast.style.display='none'; btn.textContent='💾 Sauvegarder dans la base'; btn.style.opacity='1'; resetFicheClient(); }, 3500);
+  setTimeout(()=>{ toast.style.display='none'; btn.textContent=' Sauvegarder dans la base'; btn.style.opacity='1'; resetFicheClient(); }, 3500);
 }
 
 
@@ -2638,7 +2638,7 @@ function buildReport(){
       <td style="text-align:center">${d.qty}</td>
       <td style="text-align:center">${d.h}</td>
       <td style="text-align:center">${d.days}</td>
-      <td style="text-align:center">${d.crit?'<span style="color:#C00000;font-weight:bold">✔</span>':'—'}</td>
+      <td style="text-align:center">${d.crit?'<span style="color:#C00000;font-weight:bold"></span>':'—'}</td>
       <td style="text-align:right;font-weight:bold">${fmt(d.wh)}</td>
     </tr>`).join('');
 
@@ -2752,13 +2752,13 @@ function buildReport(){
         </div>
         <div>
           <div class="rpt-kv"><span>Config. string (Ns × Np)</span><span>${rv.Ns_opt}S × ${rv.inv.n_mppt}P × ${rv.n_inv} ond.</span></div>
-          <div class="rpt-kv"><span>Voc string (STC)</span><span style="color:${rv.Voc_s<PANEL.Vmax?'var(--green-txt)':'var(--red-txt)'}">${rv.Voc_s.toFixed(1)} V ${rv.Voc_s<PANEL.Vmax?'✓':'✗'}</span></div>
+          <div class="rpt-kv"><span>Voc string (STC)</span><span style="color:${rv.Voc_s<PANEL.Vmax?'var(--green-txt)':'var(--red-txt)'}">${rv.Voc_s.toFixed(1)} V ${rv.Voc_s<PANEL.Vmax?'':''}</span></div>
           <div class="rpt-kv"><span>Vmp string (STC)</span><span>${rv.Vmp_s.toFixed(1)} V</span></div>
           <div class="rpt-kv"><span>Courant string (Imp)</span><span>${PANEL.Imp} A</span></div>
           <div class="rpt-kv"><span>Surface totale</span><span>${rv.area.toFixed(1)} m²</span></div>
         </div>
       </div>
-      <div class="rpt-warn" style="margin-top:10px">⚠ Calculs effectués en conditions STC (25°C). En zone tropicale (T>40°C), dégrader le rendement de ${rv.degradeT}%. Vérifier les coefficients thermiques lors de la visite site.</div>
+      <div class="rpt-warn" style="margin-top:10px"> Calculs effectués en conditions STC (25°C). En zone tropicale (T>40°C), dégrader le rendement de ${rv.degradeT}%. Vérifier les coefficients thermiques lors de la visite site.</div>
     </div>
   </div>
 
@@ -2783,7 +2783,7 @@ function buildReport(){
           <div class="rpt-kv"><span>Tension système batterie</span><span>${rv.bat_V} V</span></div>
           <div class="rpt-kv"><span>Nombre de batteries</span><span><b>${rv.n_bat} unité(s)</b></span></div>
           <div class="rpt-kv"><span>Capacité totale</span><span><b>${rv.bat_kWh_total.toFixed(2)} kWh</b></span></div>
-          <div class="rpt-kv"><span>Compatibilité onduleur</span><span style="color:var(--green-txt)">✓ ${rv.bat_V}V — Compatible ${rv.inv_nom}</span></div>
+          <div class="rpt-kv"><span>Compatibilité onduleur</span><span style="color:var(--green-txt)"> ${rv.bat_V}V — Compatible ${rv.inv_nom}</span></div>
         </div>
       </div>`:`
       <div class="rpt-ok">Ce dimensionnement ne prévoit pas de batterie (${rv.gridType==='on-grid'?'système On-Grid sans stockage — énergie fournie par réseau CIE la nuit':'selon paramètres choisis'}).</div>`}
@@ -2848,7 +2848,7 @@ function buildReport(){
           <div class="rpt-kv"><span>Gain net sur 25 ans</span><span><b style="color:var(--green-txt)">${rv.gain25>0?'+'+fmtF(rv.gain25/1000)+' k FCFA':'—'}</b></span></div>
         </div>
       </div>
-      <div class="rpt-warn">⚠ Les économies sont estimatives. L'économie réelle dépend du profil de consommation effectif, du tarif CIE en vigueur et des performances terrain. Une simulation PVSyst complète est recommandée pour les projets > 10 kWc.</div>
+      <div class="rpt-warn"> Les économies sont estimatives. L'économie réelle dépend du profil de consommation effectif, du tarif CIE en vigueur et des performances terrain. Une simulation PVSyst complète est recommandée pour les projets > 10 kWc.</div>
     </div>
   </div>
 
@@ -2859,8 +2859,8 @@ function buildReport(){
     <div class="rpt-sec-body">
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:14px">
         <div style="text-align:center;padding:14px 10px;background:linear-gradient(135deg,#e8f5e9,#f0faf0);border-radius:10px;border:2px solid #4CAF50;grid-column:1/-1">
-          <div style="font-size:1.25rem;font-weight:bold;color:#1a5c30">📦 ${sp.nom}</div>
-          <div style="font-size:.78rem;color:#555;margin-top:3px">Segment ${sp.seg} — ${SEG_LABELS[sp.seg]||''} ${sp.jua?'&nbsp;⚡ Plug&amp;Play JUA':''}</div>
+          <div style="font-size:1.25rem;font-weight:bold;color:#1a5c30"> ${sp.nom}</div>
+          <div style="font-size:.78rem;color:#555;margin-top:3px">Segment ${sp.seg} — ${SEG_LABELS[sp.seg]||''} ${sp.jua?'&nbsp; Plug&amp;Play JUA':''}</div>
           <div style="font-size:.73rem;color:#777;margin-top:6px;font-style:italic">${sp.config}</div>
         </div>
         <div style="text-align:center;padding:12px 8px;background:#e3f2fd;border-radius:8px;border:1px solid #90caf9">
@@ -2882,10 +2882,10 @@ function buildReport(){
         </div>
       </div>
       ${budget?`<div style="font-size:.8rem;padding:8px 12px;border-radius:6px;background:${sp.prix<=Number(budget)?'#e8f5e9':'#fce4ec'};border-left:3px solid ${sp.prix<=Number(budget)?'#4CAF50':'#F44336'};margin-bottom:10px">
-        ${sp.prix<=Number(budget)?'✅ Ce pack est <b>dans le budget</b> client de '+fmtF(budget)+' FCFA.':'⚠ Ce pack dépasse le budget client de '+fmtF(budget)+' FCFA de <b>'+fmtF(sp.prix-Number(budget))+' FCFA</b>.'}
+        ${sp.prix<=Number(budget)?' Ce pack est <b>dans le budget</b> client de '+fmtF(budget)+' FCFA.':' Ce pack dépasse le budget client de '+fmtF(budget)+' FCFA de <b>'+fmtF(sp.prix-Number(budget))+' FCFA</b>.'}
       </div>`:''}
       <div style="font-size:.75rem;color:#777;background:#f9f9f9;border-radius:6px;padding:8px 12px;border-left:3px solid #ccc">
-        ℹ️ Les conditions financières sont soumises à validation par le département commercial GREENO. Devis non contractuel.
+        ℹ Les conditions financières sont soumises à validation par le département commercial GREENO. Devis non contractuel.
       </div>
     </div>
   </div>` : `
@@ -2907,11 +2907,11 @@ function buildReport(){
       <table class="rpt-table">
         <thead><tr><th>Paramètre</th><th>Valeur calculée</th><th>Limite/Plage</th><th>Statut</th></tr></thead>
         <tbody>
-          <tr><td>Voc string ≤ Vmax onduleur</td><td>${rv.Voc_s.toFixed(1)} V</td><td>< ${PANEL.Vmax} V</td><td style="color:${rv.Voc_s<PANEL.Vmax?'var(--green-txt)':'var(--red-txt)'}">${rv.Voc_s<PANEL.Vmax?'✓ CONFORME':'✗ NON CONFORME'}</td></tr>
-          <tr><td>Vmp string dans plage MPPT</td><td>${rv.Vmp_s.toFixed(1)} V</td><td>${rv.inv.mppt_min}–${rv.inv.mppt_max} V</td><td style="color:${rv.Vmp_s>=rv.inv.mppt_min&&rv.Vmp_s<=rv.inv.mppt_max?'var(--green-txt)':'var(--yellow-txt)'}">${rv.Vmp_s>=rv.inv.mppt_min&&rv.Vmp_s<=rv.inv.mppt_max?'✓ CONFORME':'⚠ À VÉRIFIER'}</td></tr>
-          <tr><td>Courant Imp ≤ Imax entrée PV</td><td>${PANEL.Imp} A</td><td>≤ ${rv.inv.imax} A</td><td style="color:${PANEL.Imp<=rv.inv.imax?'var(--green-txt)':'var(--red-txt)'}">${PANEL.Imp<=rv.inv.imax?'✓ CONFORME':'✗ NON CONFORME'}</td></tr>
-          <tr><td>Ratio DC/AC</td><td>${rv.ratio.toFixed(3)}×</td><td>1.00–1.35×</td><td style="color:${rv.ratio>=1.0&&rv.ratio<=1.35?'var(--green-txt)':'var(--yellow-txt)'}">${rv.ratio>=1.0&&rv.ratio<=1.35?'✓ OPTIMAL':'⚠ À OPTIMISER'}</td></tr>
-          ${rv.usesBat?`<tr><td>Tension batterie / onduleur</td><td>${rv.bat_V} V</td><td>${rv.inv.bat_V} V requis</td><td style="color:${rv.bat_V===rv.inv.bat_V?'var(--green-txt)':'var(--red-txt)'}">${rv.bat_V===rv.inv.bat_V?'✓ COMPATIBLE':'✗ INCOMPATIBLE'}</td></tr>`:''}
+          <tr><td>Voc string ≤ Vmax onduleur</td><td>${rv.Voc_s.toFixed(1)} V</td><td>< ${PANEL.Vmax} V</td><td style="color:${rv.Voc_s<PANEL.Vmax?'var(--green-txt)':'var(--red-txt)'}">${rv.Voc_s<PANEL.Vmax?' CONFORME':' NON CONFORME'}</td></tr>
+          <tr><td>Vmp string dans plage MPPT</td><td>${rv.Vmp_s.toFixed(1)} V</td><td>${rv.inv.mppt_min}–${rv.inv.mppt_max} V</td><td style="color:${rv.Vmp_s>=rv.inv.mppt_min&&rv.Vmp_s<=rv.inv.mppt_max?'var(--green-txt)':'var(--yellow-txt)'}">${rv.Vmp_s>=rv.inv.mppt_min&&rv.Vmp_s<=rv.inv.mppt_max?' CONFORME':' À VÉRIFIER'}</td></tr>
+          <tr><td>Courant Imp ≤ Imax entrée PV</td><td>${PANEL.Imp} A</td><td>≤ ${rv.inv.imax} A</td><td style="color:${PANEL.Imp<=rv.inv.imax?'var(--green-txt)':'var(--red-txt)'}">${PANEL.Imp<=rv.inv.imax?' CONFORME':' NON CONFORME'}</td></tr>
+          <tr><td>Ratio DC/AC</td><td>${rv.ratio.toFixed(3)}×</td><td>1.00–1.35×</td><td style="color:${rv.ratio>=1.0&&rv.ratio<=1.35?'var(--green-txt)':'var(--yellow-txt)'}">${rv.ratio>=1.0&&rv.ratio<=1.35?' OPTIMAL':' À OPTIMISER'}</td></tr>
+          ${rv.usesBat?`<tr><td>Tension batterie / onduleur</td><td>${rv.bat_V} V</td><td>${rv.inv.bat_V} V requis</td><td style="color:${rv.bat_V===rv.inv.bat_V?'var(--green-txt)':'var(--red-txt)'}">${rv.bat_V===rv.inv.bat_V?' COMPATIBLE':' INCOMPATIBLE'}</td></tr>`:''}
         </tbody>
       </table>
     </div>
@@ -2991,10 +2991,10 @@ function buildReport(){
 ══════════════════════════════════════════════ -->
 <div class="tab-c" id="tab-dashboard">
 <nav class="tab-nav">
-  <button class="tab-btn active" onclick="switchTab('general')">📈 Vue Générale</button>
-  <button class="tab-btn" onclick="switchTab('packs')">📦 Packs TEVIA</button>
-  <button class="tab-btn" onclick="switchTab('techniciens')">👷 Techniciens</button>
-  <button class="tab-btn" onclick="switchTab('segmentation')">🗂 Segmentation Devis</button>
+  <button class="tab-btn active" onclick="switchTab('general')"> Vue Générale</button>
+  <button class="tab-btn" onclick="switchTab('packs')"> Packs TEVIA</button>
+  <button class="tab-btn" onclick="switchTab('techniciens')"> Techniciens</button>
+  <button class="tab-btn" onclick="switchTab('segmentation')"> Segmentation Devis</button>
 </nav>
 <!-- ══ FILTRES GLOBAUX (toutes les vues) ═══════ -->
 <div class="global-filters">
@@ -3002,7 +3002,7 @@ function buildReport(){
 
   <!-- Filtre temporel -->
   <div class="period-bar" style="margin-bottom:10px">
-    <span class="period-lbl">📅 Période :</span>
+    <span class="period-lbl"> Période :</span>
     <button class="period-btn" data-p="day"     onclick="setPeriod('day')">Aujourd'hui</button>
     <button class="period-btn" data-p="week"    onclick="setPeriod('week')">Cette semaine</button>
     <div class="period-sep"></div>
@@ -3042,14 +3042,14 @@ function buildReport(){
     <div><label>Technicien</label>
       <select id="f-tech"><option value="">Tous</option></select></div>
     <div style="display:flex;gap:8px;align-items:flex-end">
-      <button onclick="applyFilters()">🔍 Filtrer</button>
-      <button class="btn-reset" onclick="resetFilters()">✕ Reset</button>
+      <button onclick="applyFilters()"> Filtrer</button>
+      <button class="btn-reset" onclick="resetFilters()"> Reset</button>
       <span id="filter-count-lbl" style="font-size:.74rem;color:var(--green-mid);font-weight:bold;padding:4px 10px;background:#e8f5e9;border-radius:10px;border:1px solid #c8e6c9;white-space:nowrap"></span>
     </div>
     <div style="display:flex;gap:8px;align-items:flex-end;margin-left:auto">
-      <button class="export-btn" onclick="exportCSV()" title="CSV filtré">📥 CSV</button>
-      <button class="export-btn" style="background:#2C6E49;color:#fff" onclick="exportJSON()">💾 JSON</button>
-      <label class="import-lbl" title="Importer JSON">📂 Import <input type="file" accept=".json" onchange="importJSON(this)" style="display:none"></label>
+      <button class="export-btn" onclick="exportCSV()" title="CSV filtré"> CSV</button>
+      <button class="export-btn" style="background:#2C6E49;color:#fff" onclick="exportJSON()"> JSON</button>
+      <label class="import-lbl" title="Importer JSON"> Import <input type="file" accept=".json" onchange="importJSON(this)" style="display:none"></label>
     </div>
   </div>
 
@@ -3080,12 +3080,12 @@ function buildReport(){
       <div class="scard-sub" id="st-cost-ea">0 FCFA</div>
     </div>
     <div class="scard scard-va">
-      <div class="scard-lbl">✅ Validés – En attente installation</div>
+      <div class="scard-lbl"> Validés – En attente installation</div>
       <div class="scard-val" id="st-count-va">0</div>
       <div class="scard-sub" id="st-cost-va">0 FCFA</div>
     </div>
     <div class="scard scard-vi">
-      <div class="scard-lbl">🏗 Validés et installés</div>
+      <div class="scard-lbl"> Validés et installés</div>
       <div class="scard-val" id="st-count-vi">0</div>
       <div class="scard-sub" id="st-cost-vi">0 FCFA</div>
     </div>
@@ -3097,29 +3097,29 @@ function buildReport(){
   <!-- Graphiques -->
   <div class="charts-row">
     <div class="chart-card">
-      <h3>☀️ Répartition par type de système</h3>
+      <h3> Répartition par type de système</h3>
       <div class="chart-wrap"><canvas id="ch-grid"></canvas></div>
     </div>
     <div class="chart-card">
-      <h3>🏗 Répartition par type d'installation</h3>
+      <h3> Répartition par type d'installation</h3>
       <div class="chart-wrap"><canvas id="ch-type"></canvas></div>
     </div>
     <div class="chart-card">
-      <h3>⚡ Distribution des puissances (kWc)</h3>
+      <h3> Distribution des puissances (kWc)</h3>
       <div class="chart-wrap"><canvas id="ch-power"></canvas></div>
     </div>
     <div class="chart-card">
-      <h3>🗂 Statut des devis</h3>
+      <h3> Statut des devis</h3>
       <div class="chart-wrap"><canvas id="ch-statut"></canvas></div>
     </div>
   </div>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:20px">
     <div class="chart-card">
-      <h3>📅 Évolution mensuelle des projets</h3>
+      <h3> Évolution mensuelle des projets</h3>
       <div class="chart-wrap"><canvas id="ch-timeline"></canvas></div>
     </div>
     <div class="chart-card">
-      <h3>💰 Coût vs Puissance installée</h3>
+      <h3> Coût vs Puissance installée</h3>
       <div class="chart-wrap"><canvas id="ch-scatter"></canvas></div>
     </div>
   </div>
@@ -3127,7 +3127,7 @@ function buildReport(){
   <!-- Table historique -->
   <div class="table-card">
     <h3>
-      <span>📋 Historique des dimensionnements</span>
+      <span> Historique des dimensionnements</span>
       <span id="count-label" style="font-size:.73rem;color:#888;font-weight:normal"></span>
     </h3>
     <div id="table-wrap"></div>
@@ -3143,7 +3143,7 @@ function buildReport(){
 <div class="container">
 
   <div class="sec-hdr">
-    <div><h2>📦 Analyse des Packs TEVIA vendus</h2>
+    <div><h2> Analyse des Packs TEVIA vendus</h2>
     <p>Répartition des packs sélectionnés dans les devis — CA, fréquence, puissance moyenne</p></div>
   </div>
 
@@ -3157,11 +3157,11 @@ function buildReport(){
 
   <div class="charts-row" style="margin-bottom:20px">
     <div class="chart-card">
-      <h3>📊 Nombre de ventes par pack</h3>
+      <h3> Nombre de ventes par pack</h3>
       <div class="chart-wrap"><canvas id="ch-pk-count"></canvas></div>
     </div>
     <div class="chart-card">
-      <h3>💰 Chiffre d'affaires par pack (MFCFA)</h3>
+      <h3> Chiffre d'affaires par pack (MFCFA)</h3>
       <div class="chart-wrap"><canvas id="ch-pk-ca"></canvas></div>
     </div>
   </div>
@@ -3186,7 +3186,7 @@ function buildReport(){
 <div class="container">
 
   <div class="sec-hdr">
-    <div><h2>👷 Performance des Techniciens</h2>
+    <div><h2> Performance des Techniciens</h2>
     <p>Activité, puissance dimensionnée, CA généré, taux de validation</p></div>
   </div>
 
@@ -3199,11 +3199,11 @@ function buildReport(){
 
   <div class="charts-row" style="margin-bottom:20px">
     <div class="chart-card">
-      <h3>📋 Nombre de dimensionnements par technicien</h3>
+      <h3> Nombre de dimensionnements par technicien</h3>
       <div class="chart-wrap"><canvas id="ch-tc-nb"></canvas></div>
     </div>
     <div class="chart-card">
-      <h3>💰 CA généré par technicien (MFCFA)</h3>
+      <h3> CA généré par technicien (MFCFA)</h3>
       <div class="chart-wrap"><canvas id="ch-tc-ca"></canvas></div>
     </div>
   </div>
@@ -3225,7 +3225,7 @@ function buildReport(){
 <div class="container">
 
   <div class="sec-hdr">
-    <div><h2>🗂 Segmentation & Suivi des Devis</h2>
+    <div><h2> Segmentation & Suivi des Devis</h2>
     <p>Gérez le statut commercial de chaque devis — modifiez directement dans le tableau</p></div>
   </div>
 
@@ -3234,11 +3234,11 @@ function buildReport(){
 
   <div class="charts-row" style="margin-bottom:20px">
     <div class="chart-card">
-      <h3>🗂 Répartition des statuts (volume)</h3>
+      <h3> Répartition des statuts (volume)</h3>
       <div class="chart-wrap-sm"><canvas id="ch-seg-statut"></canvas></div>
     </div>
     <div class="chart-card">
-      <h3>💰 CA par statut (MFCFA)</h3>
+      <h3> CA par statut (MFCFA)</h3>
       <div class="chart-wrap-sm"><canvas id="ch-seg-ca"></canvas></div>
     </div>
   </div>
@@ -3274,7 +3274,7 @@ const TYPE_COLORS = ['#3dbf6e','#3498db','#e74c3c','#9b59b6','#F4B942','#00b89c'
 const STATUT_LABELS = {en_attente:'Non validé',valide_attente:'Validé – En attente',valide_installe:'Validé et installé'};
 const STATUT_COLORS = {en_attente:'#FFC107',valide_attente:'#3498db',valide_installe:'#28a745'};
 const STATUT_BG    = {en_attente:'#fff3cd',valide_attente:'#d0e8ff',valide_installe:'#d4edda'};
-const STATUT_ICONS = {en_attente:'⏳',valide_attente:'✅',valide_installe:'🏗'};
+const STATUT_ICONS = {en_attente:'⏳',valide_attente:'',valide_installe:''};
 
 let allData = [];
 let filtered = [];
@@ -3371,7 +3371,7 @@ function setPeriod(p){
   if(p==='all'){ lbl.style.display='none'; }
   else {
     const fmtD = dt => dt ? dt.toLocaleDateString('fr-FR') : '?';
-    lbl.textContent = '📅 ' + fmtD(dateFrom) + ' → ' + fmtD(dateTo);
+    lbl.textContent = ' ' + fmtD(dateFrom) + ' → ' + fmtD(dateTo);
     lbl.style.display='inline-block';
   }
 
@@ -3552,7 +3552,7 @@ function updateTable(){
 
   if(!count){
     document.getElementById('table-wrap').innerHTML =
-      '<div class="empty"><div class="empty-icon">📭</div><p>Aucun dimensionnement trouvé.</p></div>';
+      '<div class="empty"><div class="empty-icon"></div><p>Aucun dimensionnement trouvé.</p></div>';
     return;
   }
 
@@ -3573,13 +3573,13 @@ function updateTable(){
       <td>
         <select class="status-sel ${statutClass(statut(d))}" onchange="updateStatut(${d.id},this.value);this.className='status-sel '+statutClass(this.value)">
           <option value="en_attente"   ${statut(d)==='en_attente'   ?'selected':''}>⏳ Non validé</option>
-          <option value="valide_attente" ${statut(d)==='valide_attente'?'selected':''}>✅ Validé – Attente</option>
-          <option value="valide_installe" ${statut(d)==='valide_installe'?'selected':''}>🏗 Installé</option>
+          <option value="valide_attente" ${statut(d)==='valide_attente'?'selected':''}> Validé – Attente</option>
+          <option value="valide_installe" ${statut(d)==='valide_installe'?'selected':''}> Installé</option>
         </select>
       </td>
       <td style="text-align:center;white-space:nowrap">
-        <button class="view-btn" onclick="viewRecord(${d.id})" title="Consulter">👁</button>
-        <button class="del-btn" onclick="deleteRecord(${d.id})" title="Supprimer">🗑</button>
+        <button class="view-btn" onclick="viewRecord(${d.id})" title="Consulter"></button>
+        <button class="del-btn" onclick="deleteRecord(${d.id})" title="Supprimer"></button>
       </td>
     </tr>`).join('');
 
@@ -3662,7 +3662,7 @@ function renderPacks(){
   // Table packs
   if(!packs.length){
     document.getElementById('pk-table-wrap').innerHTML=
-      '<div class="empty"><div class="empty-icon">📦</div><p>Aucun devis avec pack TEVIA sélectionné.</p></div>';
+      '<div class="empty"><div class="empty-icon"></div><p>Aucun devis avec pack TEVIA sélectionné.</p></div>';
   } else {
     const rows = packs.map((p,i)=>`
       <tr>
@@ -3689,7 +3689,7 @@ function renderPacks(){
 
   // Devis sans pack
   if(!withoutPack.length){
-    document.getElementById('pk-no-pack-wrap').innerHTML='<p style="color:#aaa;padding:12px;font-size:.8rem">Tous les devis ont un pack TEVIA sélectionné. ✅</p>';
+    document.getElementById('pk-no-pack-wrap').innerHTML='<p style="color:#aaa;padding:12px;font-size:.8rem">Tous les devis ont un pack TEVIA sélectionné. </p>';
   } else {
     const rows2 = withoutPack.map(d=>`
       <tr>
@@ -3826,8 +3826,8 @@ function renderSegmentation(){
   // Entonnoir
   const steps = [
     {label:'Total devis créés',count:filtered.length,ca:filtered.reduce((a,d)=>a+(d.cost_install||0),0),color:'#6c757d'},
-    {label:'✅ Validés (attente + installés)',count:va.length+vi.length,ca:[...va,...vi].reduce((a,d)=>a+(d.cost_install||0),0),color:'#3498db'},
-    {label:'🏗 Validés et installés',count:vi.length,ca:vi.reduce((a,d)=>a+(d.cost_install||0),0),color:'#28a745'},
+    {label:' Validés (attente + installés)',count:va.length+vi.length,ca:[...va,...vi].reduce((a,d)=>a+(d.cost_install||0),0),color:'#3498db'},
+    {label:' Validés et installés',count:vi.length,ca:vi.reduce((a,d)=>a+(d.cost_install||0),0),color:'#28a745'},
   ];
   document.getElementById('seg-funnel').innerHTML = steps.map(s=>`
     <div class="funnel-step" style="background:${s.color}18;border-left:5px solid ${s.color}">
@@ -3873,7 +3873,7 @@ function renderSegTable(){
 
   if(!data.length){
     document.getElementById('seg-table-wrap').innerHTML=
-      '<div class="empty"><div class="empty-icon">🗂</div><p>Aucun devis pour cette période.</p></div>';
+      '<div class="empty"><div class="empty-icon"></div><p>Aucun devis pour cette période.</p></div>';
     return;
   }
 
@@ -3891,13 +3891,13 @@ function renderSegTable(){
         <select class="status-sel ${statutClass(statut(d))}"
           onchange="updateStatut(${d.id},this.value);this.className='status-sel '+statutClass(this.value)">
           <option value="en_attente"    ${statut(d)==='en_attente'   ?'selected':''}>⏳ Non validé</option>
-          <option value="valide_attente"  ${statut(d)==='valide_attente' ?'selected':''}>✅ Validé – Attente</option>
-          <option value="valide_installe" ${statut(d)==='valide_installe'?'selected':''}>🏗 Installé</option>
+          <option value="valide_attente"  ${statut(d)==='valide_attente' ?'selected':''}> Validé – Attente</option>
+          <option value="valide_installe" ${statut(d)==='valide_installe'?'selected':''}> Installé</option>
         </select>
       </td>
       <td style="text-align:center;white-space:nowrap">
-        <button class="view-btn" onclick="viewRecord(${d.id})" title="Consulter">👁</button>
-        <button class="del-btn"  onclick="deleteRecord(${d.id})" title="Supprimer">🗑</button>
+        <button class="view-btn" onclick="viewRecord(${d.id})" title="Consulter"></button>
+        <button class="del-btn"  onclick="deleteRecord(${d.id})" title="Supprimer"></button>
       </td>
     </tr>`).join('');
 
@@ -3987,14 +3987,14 @@ function viewRecord(id){
       ${d.packNom?`
       <!-- Pack TEVIA -->
       <div style="background:#e8f5e9;border:2px solid #4CAF50;border-radius:8px;padding:14px;margin-bottom:16px">
-        <div style="font-weight:bold;color:#1a5c30;margin-bottom:8px;font-size:.82rem">📦 Pack TEVIA sélectionné</div>
+        <div style="font-weight:bold;color:#1a5c30;margin-bottom:8px;font-size:.82rem"> Pack TEVIA sélectionné</div>
         <div style="font-size:.8rem"><b>${d.packNom}</b>${d.packConfig?` — <span style="color:#555">${d.packConfig}</span>`:''}</div>
       </div>`:''}
 
       ${loadsHtml?`
       <!-- Bilan des charges -->
       <div style="margin-bottom:16px">
-        <div style="font-weight:bold;color:#1a5c30;margin-bottom:8px;font-size:.82rem;border-bottom:2px solid #e0f0e8;padding-bottom:4px">⚡ Bilan des charges — ${fmt(totalWh)} Wh/j total</div>
+        <div style="font-weight:bold;color:#1a5c30;margin-bottom:8px;font-size:.82rem;border-bottom:2px solid #e0f0e8;padding-bottom:4px"> Bilan des charges — ${fmt(totalWh)} Wh/j total</div>
         <div style="overflow-x:auto">
           <table style="width:100%;border-collapse:collapse;font-size:.78rem">
             <thead><tr style="background:#0d2e1a;color:#fff">
@@ -4013,12 +4013,12 @@ function viewRecord(id){
         <select class="status-sel ${statutClass(st)}" id="modal-statut-sel"
           onchange="updateStatut(${d.id},this.value);this.className='status-sel '+statutClass(this.value)">
           <option value="en_attente"    ${st==='en_attente'   ?'selected':''}>⏳ Non validé</option>
-          <option value="valide_attente"  ${st==='valide_attente' ?'selected':''}>✅ Validé – Attente</option>
-          <option value="valide_installe" ${st==='valide_installe'?'selected':''}>🏗 Installé</option>
+          <option value="valide_attente"  ${st==='valide_attente' ?'selected':''}> Validé – Attente</option>
+          <option value="valide_installe" ${st==='valide_installe'?'selected':''}> Installé</option>
         </select>
         <div style="display:flex;gap:8px">
           <button onclick="deleteRecord(${d.id});closeModal()"
-            style="padding:7px 14px;background:#fff0f0;color:#c00;border:1.5px solid #f8b4b4;border-radius:8px;cursor:pointer;font-weight:bold">🗑 Supprimer</button>
+            style="padding:7px 14px;background:#fff0f0;color:#c00;border:1.5px solid #f8b4b4;border-radius:8px;cursor:pointer;font-weight:bold"> Supprimer</button>
           <button onclick="closeModal()"
             style="padding:7px 20px;background:var(--green-mid);color:#fff;border:none;border-radius:8px;cursor:pointer;font-weight:bold">Fermer</button>
         </div>
@@ -4126,7 +4126,7 @@ function importJSON(input){
       allData = Object.values(localMap).sort((a,b) => b.id - a.id);
       saveDB(allData);
       render();
-      alert(`Import réussi ✓\n• ${added} nouveau(x) enregistrement(s) ajouté(s)\n• ${updated} mis à jour\n• Total base : ${allData.length} dimensionnements`);
+      alert(`Import réussi \n• ${added} nouveau(x) enregistrement(s) ajouté(s)\n• ${updated} mis à jour\n• Total base : ${allData.length} dimensionnements`);
     } catch(err){
       alert('Erreur lors de la lecture du fichier JSON :\n' + err.message);
     }
